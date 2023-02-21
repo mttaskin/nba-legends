@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import { data } from "../helpers/data";
-// import PlayerCard from "./PlayerCard";
+import PlayerCard from "./PlayerCard";
 import { useState } from "react";
 
 const CardContainer = () => {
@@ -21,7 +21,7 @@ const CardContainer = () => {
         {data.filter((player)=>player.name.toLowerCase().includes(search.trim().toLowerCase())).map((player, i) => {
           return (
             <Col md={6} lg={4} xl={3} key={i}>
-              {/* <PlayerCard {...player} /> */}
+              <PlayerCard {...player} />
             </Col>
           );
         })}
